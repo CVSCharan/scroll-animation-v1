@@ -1,0 +1,32 @@
+.imgs {
+  position: relative;
+}
+
+.topSectionImg {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ensure the image covers the full viewport height */
+  /* (oldVal - oldMin) * newRange / oldRange + newMin */
+  --value: min(var(--scroll), 30) * 50 / 30;
+  width: calc(50vw + 1vw * var(--value));
+  transform: translateY(calc(50% - 1% * var(--value)));
+}
+
+.show {
+  translate: 0 0;
+}
+
+.imgWrapper[data-img] {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ensure the image covers the full viewport height */
+}
+
+.wrapper {
+  position: relative;
+}
+
+.wrapper .imgTrigger[data-img-to-show] {
+  position: absolute;
+  top: 20%;
+}
